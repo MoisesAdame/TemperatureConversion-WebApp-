@@ -1,85 +1,87 @@
 <!DOCTYPE html>
-<html>
-    <style>
-        #all{
-            font-family: 'Courier New', Courier, monospace;
-        }
-        body {background-color: black;}
-        
-        h1   {color: white;}
-        p    {color: white;}
-        input{color: white;
-              background-color: black;}
-        table{color: white;
-              border-spacing: 50px 10px}
-        input{height: 35px;
-              width: 80px;
-              font-family: 'Courier New', Courier, monospace;
-              font-size: 30px;}
-        button{height: 40px;
-               width: 170px;
-               background-color: black;
-               color: white;
-               font-size: 30px;}
-    </style>
+<html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <p id=all style="font-size: 50px; text-align: center;">
-            <b>
-                Temperature Conversion
-            </b>
-        </p>
+        <title>Who am I?</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="description" content="">
+        <style>
+            body{
+                text-align: center;
+                color: white;
+                font-size: 20px;
+                font-family: futura;
+                background: rgb(131,58,180);
+                background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+                background-repeat: repeat-x;
+                
+            
+                
+            }
+            h1{
+                color: white;
+            }
+            table.head{
+                width: fit-content;
 
-        <center>
-            <p id=all style="font-size: 30px;">
-                This is a web app developed by <b>Moisés Adame</b>
-            </p>
-        </center>
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                
+            }
+            img.front{
+                width: 200px;
+                object-position: bottom;
+            }
+            p.username{
+                font-weight: bold;
+
+            }
+            img.media{
+                width: 50px;
+            }
+
+        </style>
     </head>
 
-    
     <body>
+        
+        <h1>Moisés Adame Aguilar</h1>
+        <p style="font-size: 30px;">My projects</p>
+        <p href="tempApp.html">Temperature Conversion: Convert to Celsius, Fahrenheit and even Kelvin!</p>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      
+        
+        <!---src es source y ahi pones el path alt es alternative txt-->
+        <img class="front" src="images/me.png" alt="An image of Moy">
+        <p class="username">@MoisesAdame</p>
+    
+        <footer>
+            <a href="https://github.com/MoisesAdame"><img class="media" src="images/GitHub.png" alt="An image of Moy"></a>       
+            <a href="https://www.instagram.com/moisesadame/"><img class="media" src="images/insta.png" alt="An image of Moy"></a>
+            <a href="https://mega.nz/fm/Y19RBJLR"><img class="media" src="images/mega.png" alt="An image of Moy"></a>
+            <a href="mailto:moisesadame01@gmail.com"><img class="media" src="images/mail.png" alt="An image of Moy"></a>
 
 
-        <center>
-            <table id = all style="font-size: 30px;">
-                <tr>
-                    <!--Input de la Temperatura a Convertir-->
-                    <td>
-                        <input id="input_id1" value=20></input>
-                    </td>
-
-                    <!--Elegimos el sistema de la temperatura inputeada-->
-                    <td>
-                        <input id="input_id2" value="C"></input>
-                    </td>
-                    <td>
-                        =
-                    </td>
-                    <!--Resultado-->
-                    <td>
-                        <input id="input_id3" value=68></input>
-                    </td>
-                    <td>
-                        <input id="input_id4" value="F"></input>
-                    </td>
-                </tr>
-            </table>
-        </center>
-
-        <!--Botón para convertir-->
-        <br><\br>
-
-        <center>
-            <button id=all type="button" onclick='convertTemp();'> Convert!</button>
-        </center>
-
-        <script type="text/javascript" src="tempConvAlgo.js"></script>
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6623649494418009"
-     crossorigin="anonymous"></script>
-
-
+        </footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
     </body>
 </html>

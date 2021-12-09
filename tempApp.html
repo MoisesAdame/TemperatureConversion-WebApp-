@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #all{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {background-color: black;}
+        
+        h1   {color: white;}
+        p    {color: white;}
+        input{color: white;
+              background-color: black;}
+        table{color: white;
+              border-spacing: 50px 10px}
+        input{height: 35px;
+              width: 80px;
+              font-family: 'Courier New', Courier, monospace;
+              font-size: 30px;}
+        button{height: 40px;
+               width: 170px;
+               background-color: black;
+               color: white;
+               font-size: 30px;}
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <p id=all style="font-size: 50px; text-align: center;">
+            <b>
+                Temperature Conversion
+            </b>
+        </p>
+
+        <center>
+            <p id=all style="font-size: 30px;">
+                This is a web app developed by <b>Moisés Adame</b>
+            </p>
+        </center>
+    </head>
+
+    
+    <body>
+
+
+        <center>
+            <table id = all style="font-size: 30px;">
+                <tr>
+                    <!--Input de la Temperatura a Convertir-->
+                    <td>
+                        <input id="input_id1" value=20></input>
+                    </td>
+
+                    <!--Elegimos el sistema de la temperatura inputeada-->
+                    <td>
+                        <input id="input_id2" value="C"></input>
+                    </td>
+                    <td>
+                        =
+                    </td>
+                    <!--Resultado-->
+                    <td>
+                        <input id="input_id3" value=68></input>
+                    </td>
+                    <td>
+                        <input id="input_id4" value="F"></input>
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+        <!--Botón para convertir-->
+        <br><\br>
+
+        <center>
+            <button id=all type="button" onclick='convertTemp();'> Convert!</button>
+        </center>
+
+        <script type="text/javascript" src="tempConvAlgo.js"></script>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6623649494418009"
+     crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
