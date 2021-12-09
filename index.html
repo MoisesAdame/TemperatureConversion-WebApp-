@@ -8,32 +8,33 @@
         
         h1   {color: white;}
         p    {color: white;}
-        input{color:  white;
+        input{color: white;
               background-color: black;}
         table{color: white;
               border-spacing: 50px 10px}
-        input{height: 25px;
-              width: 75px;
-              font-family: 'Courier New', Courier, monospace;}
-        button{height: 25px;
-               width: 100px;
+        input{height: 35px;
+              width: 80px;
+              font-family: 'Courier New', Courier, monospace;
+              font-size: 30px;}
+        button{height: 40px;
+               width: 170px;
                background-color: black;
-               color: white;}
+               color: white;
+               font-size: 30px;}
     </style>
-
-    <title>
-        Tempreature Conversion
-    </title>
-
 
     <head>
         <meta charset="utf-8">
-        <center>
-            <h1 id=all>Temperature Convert</h1>
-        </center>
+        <p id=all style="font-size: 50px; text-align: center;">
+            <b>
+                Tempreature Conversion
+            </b>
+        </p>
 
         <center>
-            <p id=all>This is a web app developed by <b>Moisés Adame</b></p>
+            <p id=all style="font-size: 30px;">
+                This is a web app developed by <b>Moisés Adame</b>
+            </p>
         </center>
     </head>
 
@@ -42,7 +43,7 @@
 
 
         <center>
-            <table id = all>
+            <table id = all style="font-size: 30px;">
                 <tr>
                     <!--Input de la Temperatura a Convertir-->
                     <td>
@@ -71,7 +72,7 @@
         <br><\br>
 
         <center>
-            <button id=all type="button" onclick='convertTemp();'> Click Me!</button>
+            <button id=all type="button" onclick='convertTemp();'> Convert!</button>
         </center>
 
         <script type="text/javascript" src="tempConvAlgo.js"></script>
