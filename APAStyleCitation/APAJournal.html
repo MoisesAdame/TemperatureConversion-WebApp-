@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Apa Style: Journal</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="">
+
+    <!--PreSet of the things we might need-->
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            text-align: center;
+            background-color: black;
+        }
+        a{
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            text-decoration: none;
+        }
+        table{
+            border-spacing: 75px 10px;
+        }
+        button{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            background-color: black;
+        }
+        input{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            background-color: black;
+            width: 700px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 50px;">
+        APA Style Citation: Journal
+    </h1>
+    <p style="font-size: 30px;">
+        Input the information needed.
+    </p>
+
+    <!--Table to input the info of the web page cited-->
+    <center>
+        <table>
+            <!--Author(s)-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Author(s):</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input1"></input>
+                </td>
+            </tr>
+
+            <!--Year of Publication-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Year of Publication:</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input2"></input>
+                </td>
+            </tr>
+
+            <!--Title-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Title:</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input3"></input>
+                </td>
+            </tr>
+
+            <!--Editiom-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Edition (Number):</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input4"></input>
+                </td>
+            </tr>
+
+            <!--Location of Publisher-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Location of Publisher:</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input5"></input>
+                </td>
+            </tr>
+
+            <!--Publisher-->
+            <tr>
+                <td style="font-size: 30px;">
+                    <b>Publisher:</b>
+                </td>
+                <td style="font-size: 25px;">
+                    <input id="input6"></input>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <br>
+    <br>
+    <p id="output1" style="font-size: 20px;"></p>
+    <br>
+    <br>
+    <!--Inserting the Algorithm-->
+    <button onclick="bookCite();">Cite!</button>
+    <script type="text/javascript" src="APACiteAlgo.js"></script>
+</body>
+
+<footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="text-align:right; font-size: 25px;"><a href="APAAppindex.html">Go Back</a></p>
+</footer>
+
+</html>
