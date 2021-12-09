@@ -25,5 +25,4 @@ function convertTemp(){
     }else{
         document.getElementById("input_id3").value = "Error"
     }
-
 }
