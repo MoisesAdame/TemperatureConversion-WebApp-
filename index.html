@@ -44,13 +44,27 @@
             img.media{
                 width: 50px;
             }
+            h1.focus-in-expand{animation:focus-in-expand .8s cubic-bezier(.25,.46,.45,.94) both}
+            @keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
         </style>
     </head>
 
     <body>
-        
-        <h1>Moisés Adame Aguilar</h1>
+        <p id="clockTop">
+            <script>
+                function clockAppear(){
+                    while(true){
+                        document.getElementById("clockTop").innerHTML = Date();
+                    }
+                }
+
+                function clockDisappear(){
+                    document.getElementById("clockTop").innerHTML = "";
+                }
+            </script>
+        </p>
+        <h1 class="focus-in-expand">Moisés Adame Aguilar</h1>
         
         <!--Enlistando y refernciando mis proyectos-->
         <p style="font-size: 30px;">My projects</p>
@@ -67,7 +81,7 @@
       
         
         <!---src es source y ahi pones el path alt es alternative txt-->
-        <img class="front" src="images/me.png" alt="An image of Moy">
+        <img class="front" src="images/me.png" alt="An image of Moy" onmouseover="clockAppear();" onmouseleave="clockDisappear();">
         <p class="username">@MoisesAdame</p>
     
         <footer>
