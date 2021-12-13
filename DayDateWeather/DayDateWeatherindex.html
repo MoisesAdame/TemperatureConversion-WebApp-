@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Day, Date and Weather
+        </title>
+
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Day, Date and Time Based on your Location">
+        <meta name="author" content="Moisés Adame Aguilar">
+        <meta http-equiv="refresh" content="60.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                text-align: center;
+                font-family: 'Futura';
+                font-size: 200%;
+                background: rgb(148,187,233);
+                background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%) fixed;
+
+            }
+        </style>
+
+        <script>
+            function timeLocation(){
+                // Time Module
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                h = checkTime(h);
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+                setTimeout(timeLocation, 1000);
+
+                // Location module
+                
+                var x = document.getElementById("position");
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+                
+            }
+
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude;
+            }
+            
+        </script>
+
+    </head>
+
+    <body id="body" onload="timeLocation();">
+        <h1>
+            The Time Now:
+        </h1>
+
+        <p id="time">Date here</p>
+
+        <p id="position"></p>
+
+
+
+    </body>
+
+    <footer>
+
+    </footer>
+</html>
