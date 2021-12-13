@@ -65,7 +65,7 @@
 
             function showPosition(position) {
                 document.getElementById("position").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-                document.getElementById("gmap_canvas").src = "https://maps.google.com/maps?q=" position.coords.longitude + ",%20" + position.coords.longitude + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
+                document.getElementById("gmap_canvas").src = "https://maps.google.com/maps?q=" + position.coords.longitude + ",%20" + position.coords.longitude + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
             }
             
         </script>
@@ -85,7 +85,7 @@
 
         <p id="position"></p>
 
-        <iframe width="500" height="500" id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Mexico%20City&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
         <footer>
             <p style="text-align: right;"><a href="../index.html">Go Back</a></p>
