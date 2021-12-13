@@ -24,6 +24,14 @@
 
         <script>
             function timeLocation(){
+                // Location module
+                var position = document.getElementById("position");
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else {
+                    position.innerHTML = "Geolocation is not supported by this browser.";
+                }
+
                 // Time Module
                 const today = new Date();
                 let h = today.getHours();
@@ -33,17 +41,7 @@
                 m = checkTime(m);
                 s = checkTime(s);
                 document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
-                setTimeout(timeLocation, 1000);
-
-                // Location module
-                
-                var x = document.getElementById("position");
-                if(navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-                
+                setTimeout(timeLocation, 1000);   
             }
 
             function checkTime(i) {
