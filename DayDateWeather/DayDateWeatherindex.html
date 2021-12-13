@@ -11,6 +11,7 @@
         <meta name="author" content="Moisés Adame Aguilar">
         <meta http-equiv="refresh" content="60.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <style>
             body{
                 text-align: center;
@@ -24,18 +25,16 @@
                 text-decoration: none;
                 color: black;
             }
+            footer {
+                clear: both;
+                position: relative;
+                height: 200px;
+                margin-top: 400px;
+            }   
         </style>
 
         <script>
             function timeLocation(){
-                // Location module
-                var position = document.getElementById("position");
-                if(navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }else {
-                    position.innerHTML = "Geolocation is not supported by this browser.";
-                }
-
                 // Time Module
                 const today = new Date();
                 let h = today.getHours();
@@ -45,7 +44,9 @@
                 m = checkTime(m);
                 s = checkTime(s);
                 document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
-                setTimeout(timeLocation, 1000);   
+                setTimeout(timeLocation, 1000); 
+                
+                getLocation();
             }
 
             function checkTime(i) {
@@ -53,8 +54,17 @@
                 return i;
             }
 
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else {
+                    document.getElementById("position").innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+
             function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude;
+                document.getElementById("position").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
             }
             
         </script>
@@ -70,23 +80,12 @@
 
         <p id="position"></p>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
-        <p style="text-align: right;"><a href="../index.html">Go Back</a></p>
+        <footer>
+            <p style="text-align: right;"><a href="../index.html">Go Back</a></p>
+    
+        </footer>
+
     </body>
 
-    <footer>
-        
-
-    </footer>
 </html>
