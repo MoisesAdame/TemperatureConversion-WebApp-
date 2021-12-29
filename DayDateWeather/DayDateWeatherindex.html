@@ -33,50 +33,12 @@
             }   
         </style>
 
-        <script>
-            function timeLocation(){
-                // Location Module
-                getLocation();
-
-                // Time Module
-                const today = new Date();
-                let h = today.getHours();
-                let m = today.getMinutes();
-                let s = today.getSeconds();
-                h = checkTime(h);
-                m = checkTime(m);
-                s = checkTime(s);
-                document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
-                setTimeout(timeLocation, 1000); 
-                
-                
-            }
-
-            function checkTime(i) {
-                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                return i;
-            }
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }else {
-                    document.getElementById("position").innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-
-
-            function showPosition(position) {
-                document.getElementById("position").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-                document.getElementById("gmap_canvas").src = "https://maps.google.com/maps?q=" + position.coords.longitude + ",%20" + position.coords.longitude + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
-            }
-            
-        </script>
+        <script type="text/javascript" src="DayDateWeatherAlgo.js"></script>
 
     </head>
 
     <body id="body" onload="timeLocation();">
-        <h1>
+        <h1> 
             The Time Now:
         </h1>
 
@@ -88,6 +50,12 @@
 
         <p id="position"></p>
         
+        <h1>
+            The Weather:
+        </h1>
+
+        <p id="weather"></p>
+
         <footer>
             <p style="text-align: right;"><a href="../index.html">Go Back</a></p>
     
